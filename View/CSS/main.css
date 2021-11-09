@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "Meccano";
+  src:url("../includes/Meccano-Font.ttf");
+}
+
+#Accueil{
+  font-family: Meccano, serif;
+}
