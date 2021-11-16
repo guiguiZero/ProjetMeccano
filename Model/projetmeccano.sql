@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS `panier` (
   `idUser` int(11) NOT NULL,
   PRIMARY KEY (`idPanier`),
   KEY `idUser` (`idUser`)
-) ;
+);
 DROP TABLE IF EXISTS `produit`;
 CREATE TABLE IF NOT EXISTS `produit` (
   `idProduit` int(11) NOT NULL AUTO_INCREMENT,
