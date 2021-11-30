@@ -12,11 +12,91 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="CSS/test.css" type="text/css">
 
-</head>
+  </head>
   <body>
       <?php include("includes/header.php");?>
       <section class="bienvenue">
-        <p>test</p>
-      </section>
+      <div class="d-flex p-1 mb-2">
+        <div class="flex-fill m-1 p-1 bg-light">
+          <input placeholder="Rechecher un article"></input>
+          <ul>
+            <li><h3>Meilleures Ventes</h3></li>
+            <li class="marge">test1</li>
+            <li class="marge">test1</li>
+            <li class="marge">test1</li>
+          </ul>
+          <ul>
+            <li><h3>Promotions</h3></li>
+            <li class="marge">test1</li>
+            <li class="marge">test1</li>
+            <li class="marge">test1</li>
+          </ul>
+          <ul>
+            <li><h3>Recommandé</h3></li>
+            <li class="marge">test1</li>
+            <li class="marge">test1</li>
+            <li class="marge">test1</li>
+          </ul>
+        </div>
+        <div class="flex-fill m-1 p-1 bg-light">
+
+        <section class="section-content padding-y bg">
+        <div class="container">
+        <br>
+        <!-- ============================ COMPONENTS 2  ================================= -->
+        <div class="row">
+        <div class="col-md-3">
+        		<figure class="card card-product-grid">
+        			<a href="#" class="img-wrap">
+        				<img src="images/1.jpeg">
+        			</a>
+        			<figcaption class="info-wrap">
+        				<a href="#" class="title">Fjällräven Kånken Backpack Blue Ridge</a>
+        				<div class="mt-2">
+        					<var class="price">$84.00</var> <!-- price-wrap.// -->
+        					<a href="#" class="btn btn-sm btn-outline-primary float-right">Add to cart <i class="fa fa-shopping-cart"></i></a>
+        				</div> <!-- action-wrap.end -->
+        			</figcaption>
+        		</figure> <!-- card // -->
+        	</div> <!-- col.// -->
+
+        	<div class="col-md-3">
+        		<figure class="card card-product-grid">
+        			<a href="#" class="img-wrap">
+        				<img src="images/2.jpeg">
+        			</a>
+        			<figcaption class="info-wrap">
+        				<a href="#" class="title">Fjällräven Kånken Backpack Blue Ridge</a>
+        				<div class="mt-2">
+        					<var class="price">$84.00</var> <!-- price-wrap.// -->
+        					<a href="#" class="btn btn-sm btn-outline-primary float-right">Add to cart <i class="fa fa-shopping-cart"></i></a>
+        				</div> <!-- action-wrap.end -->
+        			</figcaption>
+        		</figure> <!-- card // -->
+        	</div> <!-- col.// -->
+
+        	<div class="col-md-3">
+        		<figure class="card card-product-grid">
+        			<a href="#" class="img-wrap">
+        				<img src="images/3.jpeg">
+        			</a>
+        			<figcaption class="info-wrap">
+        				<a href="#" class="title">Fjällräven Kånken Backpack Blue Ridge</a>
+        				<div class="mt-2">
+        					<var class="price">$84.00</var> <!-- price-wrap.// -->
+        					<a href="#" class="btn btn-sm btn-outline-primary float-right">Add to cart <i class="fa fa-shopping-cart"></i></a>
+        				</div> <!-- action-wrap.end -->
+        			</figcaption>
+        		</figure> <!-- card // -->
+        	</div> <!-- col.// -->
+
+
+        </div> <!-- row.// -->
+        <!-- ============================ COMPONENTS 2  END .// ================================= -->
+        </div> <!-- container .//  -->
+        </section>
+        </section>
+        </div>
+      </div>
   </body>
 </html>
