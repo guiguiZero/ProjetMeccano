@@ -58,14 +58,14 @@
            ?>
           <ul class="dropdown-menu dropdown-menu-end p-1" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="#">Your Account</a></li>
-            <li><a class="dropdown-item" href="#">Log Out</a></li>
+            <li><a class="dropdown-item" href="../Controller/Deconnexion.php">Log Out</a></li>
           </ul>
           <?php
         }else{
            ?>
            <ul class="dropdown-menu dropdown-menu-end p-1" aria-labelledby="navbarDropdown">
              <li><a class="dropdown-item" href="#">Your Account</a></li>
-             <li><a class="dropdown-item" href="#">Log In</a></li>
+             <li><a class="dropdown-item" href="Connexion.php">Log In</a></li>
            </ul>
            <?php
          } ?>
