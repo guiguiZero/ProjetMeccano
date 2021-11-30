@@ -1,5 +1,6 @@
 <?php
   include('bddConnect.php');
+  session_start();
   if(isset($_POST['identifiant']) && isset($_POST['pswd'])){
     $ident = htmlspecialchars($_POST['identifiant']);
     $pswd = htmlspecialchars($_POST['pswd']);
@@ -15,13 +16,12 @@
 
     if($count == 1){
       $data = $stmt->fetch(PDO::FETCH_ASSOC);
-      session_start();
       $_SESSION['idUser'] = $data['idUser'];
-      $_SESSION['identitée'] = $data['UserName'];
+      $_SESSION['identitee'] = $data['UserName'];
       $_SESSION['mdp'] = $data['MotDePasse'];
       $_SESSION['Mail'] = $data['Mail'];
       //On redirige vers la page d'accueil
-      header('location: ../View/Accueil.php');
+      header('location: ../View/Accueil.php?success=connexion');
     }else{
       echo "Non inscrit ! OU Identifiant incorrect !";
     }

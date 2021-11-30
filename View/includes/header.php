@@ -1,5 +1,9 @@
 <!DOCTYPE html>
     <!-- Navbar -->
+    <?php
+      session_start();
+      include('../Controller/function/isConnected.php');
+     ?>
   <div>
 <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
   <!-- Container wrapper -->
@@ -49,10 +53,22 @@
               height='25' width='25'>
           </a>
           <!-- Dropdown menu -->
+          <?php
+        if(isConnected()){
+           ?>
           <ul class="dropdown-menu dropdown-menu-end p-1" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="#">Your Account</a></li>
             <li><a class="dropdown-item" href="#">Log Out</a></li>
           </ul>
+          <?php
+        }else{
+           ?>
+           <ul class="dropdown-menu dropdown-menu-end p-1" aria-labelledby="navbarDropdown">
+             <li><a class="dropdown-item" href="#">Your Account</a></li>
+             <li><a class="dropdown-item" href="#">Log In</a></li>
+           </ul>
+           <?php
+         } ?>
         </li>
       </ul>
 
