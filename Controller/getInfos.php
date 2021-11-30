@@ -1,13 +1,30 @@
 <?php
   include('bddConnect.php');
-  function getData($Name){
+  function getDesc(){
     $Name="Moto";
     $cnx = Connect();
-    $sql = $cnx->prepare("SELECT * FROM `produit` WHERE ProdName =? " );
+    $sql = $cnx->prepare("SELECT Description FROM `produit` WHERE ProdName =? " );
     $sql->execute([$Name]);
     $row = $sql->fetch(PDO::FETCH_ASSOC);
-    echo $row['Description'];
-    //image, nom, prix
+    return $row['Description'];
+  }
+
+  function getName(){
+    $Name="Moto";
+    $cnx = Connect();
+    $sql = $cnx->prepare("SELECT ProdName FROM `produit` WHERE ProdName =? " );
+    $sql->execute([$Name]);
+    $row = $sql->fetch(PDO::FETCH_ASSOC);
+    return $row['ProdName'];
+  }
+
+  function getImage(){
+    $Name="Moto";
+    $cnx = Connect();
+    $sql = $cnx->prepare("SELECT imgProduit FROM `produit` WHERE ProdName =? " );
+    $sql->execute([$Name]);
+    $row = $sql->fetch(PDO::FETCH_ASSOC);
+    return $row['imgProduit'];
   }
 
   function getAllProduct(){
