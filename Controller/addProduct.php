@@ -6,7 +6,6 @@
   $ProdDesc=$_POST['productDesc'];
   if(isset($_FILES['img']) && !empty($_FILES['img']) && $_FILES['img']['error'] == 0){
     try {
-      echo "test";
       $img = upload_image($_FILES['img'], $ProdName, "Images/Produits/");
     } catch (Exception $e) {
       echo "erreur!";

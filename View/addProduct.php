@@ -11,7 +11,7 @@
         <h4>Prix du produit : </h4>
         <input type="number" name="productPrice" placeholder="15" required>
         <h4>Description du produit : </h4>
-        <textarea name="productDesc" placeholder="Equerre de Meccano" required></textarea> -->
+        <textarea name="productDesc" placeholder="Equerre de Meccano" required></textarea>
         <h4>Image du produit : </h4>
         <input type='file' name="img"/>
         <br>
