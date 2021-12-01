@@ -24,12 +24,9 @@ img {
     height: 220px;
 }
 
-.container {
-    /* width: 100%; */
-    /* padding-right: 10px; */
-    /* padding-left: 10px; */
-    margin-right: 100px;
-    margin-left: 100px;
+.row {
+    overflow-x: auto;
+    flex-wrap: unset;
 }
 
 .img-wrap {
@@ -46,7 +43,6 @@ img {
 }
 
 .card-product-grid .info-wrap {
-    overflow: hidden;
     padding: 18px 20px;
 }
 
