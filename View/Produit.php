@@ -13,7 +13,9 @@
   </head>
   <body>
     <?php
-      include("../Controller/function/setProduit.php");
+      include('../Controller/function/setProduit.php');
+      setPage();
      ?>
+
   </body>
 </html>

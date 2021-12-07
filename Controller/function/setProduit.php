@@ -12,11 +12,12 @@
     $name = getName();
     $img = getImage();
     $desc = getDesc();
+    $price = getPrice();
     echo "<div>";
     echo "<h2>".$name."</h2>";
     echo "<img src='".$img."' alt=".$name.">";
-    echo "<div>";
     echo "<p>".$desc."</p>";
+    echo "<p>".$price."</p>";
     echo "</div>";
   }
  ?>

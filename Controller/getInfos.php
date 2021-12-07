@@ -30,7 +30,7 @@
   function getPrice(){
     $Name="Moto";
     $cnx = Connect();
-    $sql = $cnx->("SELECT Price FROM `produit` WHERE ProdName =? " );
+    $sql = $cnx->prepare("SELECT Price FROM `produit` WHERE ProdName =? " );
     $sql->execute([$Name]);
     $row = $sql->fetch(PDO::FETCH_ASSOC);
     return $row['Price'];

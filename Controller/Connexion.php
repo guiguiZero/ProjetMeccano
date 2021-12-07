@@ -21,7 +21,7 @@
       $_SESSION['mdp'] = $data['MotDePasse'];
       $_SESSION['Mail'] = $data['Mail'];
       //On redirige vers la page d'accueil
-      header('location: ../View/Product.php?success=connexion');
+      header('location: ../View/Accueil.php?success=connexion');
     }else{
       echo "Non inscrit ! OU Identifiant incorrect !";
     }
