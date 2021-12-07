@@ -27,7 +27,9 @@
     <section class="bienvenue">
         <div class="d-flex p-1 mb-2">
             <div class="flex-fill m-1 p-1 bg-light">
-                <input placeholder="Rechecher un article"></input>
+              <form action="Produit.php" method="post">
+                <input name="research" placeholder="Rechecher un article"></input>
+              </form>
                 <ul>
                     <li>
                         <h3>Meilleures Ventes</h3>
