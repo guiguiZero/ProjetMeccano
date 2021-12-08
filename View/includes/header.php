@@ -41,8 +41,7 @@
           <a class="nav-link" href="#">Contact</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle hidden-arrow" href="#" id="navbarDropdown" role="button"
-            data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle hidden-arrow" href="Panier.php" id="navbarDropdown" role="button">
             <i class="fas fa-shopping-cart"></i>
           </a>
         </li>
