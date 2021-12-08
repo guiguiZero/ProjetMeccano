@@ -35,6 +35,12 @@
           </div>
         </div>
         <div class="form-group row">
+          <label class="col-sm-2 col-form-label" for="product_quantiter"> Quantité </label>
+          <div class="col-sm-10">
+          <input type="number" name="productQuantiter" required>
+        </div>
+      </div>
+        <div class="form-group row">
           <label class="col-sm-2 col-form-label" for="product_id"> Description du produit </label>
           <div class="col-sm-10">
             <textarea name="productDesc" placeholder="Equerre de Meccano" required></textarea>

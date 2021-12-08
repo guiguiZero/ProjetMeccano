@@ -4,6 +4,7 @@
   $ProdName=$_POST['productName'];
   $ProdPrice=$_POST['productPrice'];
   $ProdDesc=$_POST['productDesc'];
+  $ProdQuantite=$_POST['productQuantiter'];
   if(isset($_FILES['img']) && !empty($_FILES['img']) && $_FILES['img']['error'] == 0){
     try {
       $img = upload_image($_FILES['img'], $ProdName, "Images/Produits/");
@@ -15,14 +16,14 @@
   }
 
   try{
-    echo $ProdPrice;
     $cnx = connect();
-    $command = $cnx->prepare('INSERT INTO produit (idProduit, ProdName, Price, imgProduit, Description) VALUES (DEFAULT, :nameProd, :priceProd, :imgProd, :descProd)');
+    $command = $cnx->prepare('INSERT INTO produit (idProduit, ProdName, Price, imgProduit, Description, Quantite) VALUES (DEFAULT, :nameProd, :priceProd, :imgProd, :descProd, :ProdQ)');
     $command->execute($arrayName=array(
       'nameProd'=>htmlspecialchars($ProdName),
       'priceProd'=>htmlspecialchars($ProdPrice),
       'imgProd' => $img,
-      'descProd'=>htmlspecialchars($ProdDesc)
+      'descProd'=>htmlspecialchars($ProdDesc),
+      'ProdQ'=>$ProdQuantite
     ));
     //On redirige vers la page d'Accueil
 
