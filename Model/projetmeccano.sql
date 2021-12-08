@@ -18,6 +18,7 @@ CREATE TABLE IF NOT EXISTS `produit` (
   `Price` double NOT NULL,
   `imgProduit` text,
   `Description` char(255) NOT NULL,
+  `Quantite` int NOT NULL,
   PRIMARY KEY (`idProduit`)
 );
 CREATE TABLE IF NOT EXISTS `utilisateur` (
