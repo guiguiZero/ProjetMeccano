@@ -15,6 +15,7 @@
       'userPass'=>htmlspecialchars($HMDP),
       'email'=>htmlspecialchars($Mail)
     ));
+    header('location: ../View/Connexion.php');
   }catch(Exception $e){
     echo "Erreur Connexion BDD";
     die('Erreur : ' .$e->getMessage());

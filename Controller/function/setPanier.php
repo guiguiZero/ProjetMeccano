@@ -1,8 +1,29 @@
 <?php
   include('../Controller/bddConnect.php');
   function setPage(){
-    $idUser = $_SESSION['idUser'];
-    getPanier($idUser);
+    if(isConnected()){
+      $idUser = $_SESSION['idUser'];
+      getPanier($idUser);
+      echo getNBProduit($idUser);
+    }else{
+      echo '<script language="javascript">';
+      echo 'alert("Veuillez vous connecter, ou si vous ne possedez pas de compte veuillez en créez un.");';
+      echo 'window.location.href="../View/Connexion.php";';
+      echo '</script>';
+    }
+  }
+
+  function getNBProduit($idUser){
+    $cnx = Connect();
+    $sql = $cnx->prepare("SELECT sum(Quantite) AS nbProduit FROM contenu JOIN panier USING(idPanier) WHERE idUser =".$idUser);
+    $sql->execute();
+    if($sql->rowCount() == 0){
+      return 0;
+    }else{
+      while($res = $sql->fetch(PDO::FETCH_ASSOC)){
+        return $res['nbProduit'];
+      }
+    }
   }
 
   function getPanier($idUser){
@@ -30,7 +51,9 @@
                   </form>
                   <hr>
                   <form action="../Controller/deleteFromPanier.php" method="post">
-                    <input type="hidden" name="research" value=<?php echo $res['ProdName']?>>
+                    <input type="hidden" name="idPanier" value=<?php echo $res['idPanier'] ?>>
+                    <input type="hidden" name="idProduit" value=<?php echo $res['idProduit']?>>
+                    <input type="hidden" name="idUSER" value=<?php echo $idUser ?>>
                     <div>
                       <input type="submit" class="btn btn-outline-danger btn-block" value="Supprimer">
                     </div>
