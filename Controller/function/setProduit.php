@@ -2,8 +2,6 @@
   include('../Controller/getInfos.php');
   include('includes/header.php');
 
-  $reSearch = $_POST['research'];
-
   function setPage(){
     $reSearch = $_POST['research'];
     $idUser = $_SESSION['idUser'];

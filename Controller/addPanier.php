@@ -62,7 +62,21 @@
       'Quantite'=>$Quantity,
       'Prix'=>prixT($Quantity, $idPROD)
     ));
+    setPriceTotal($id);
     header('location: ../View/Accueil.php?success=connexion');
+   }catch(Exception $e){
+     echo "Erreur d'ajout !";
+     die('Erreur : ' .$e->getMessage());
+   }
+ }
+
+ function setPriceTotal($id){
+   $cnx = Connect();
+   try{
+     $command = $cnx->prepare('UPDATE `panier` SET `PrixTotal`= (SELECT sum(Prix) as pTot FROM contenu WHERE idPanier = :id) WHERE idPanier = :id ');
+     $command->execute($arrayName=array(
+       'id'=>$id
+     ));
    }catch(Exception $e){
      echo "Erreur d'ajout !";
      die('Erreur : ' .$e->getMessage());
@@ -82,6 +96,7 @@
       'Quantite'=>$Quantity,
       'Prix'=>prixT($Quantity, $idPROD)
     ));
+    setPriceTotal($id);
     header('location: ../View/Accueil.php?success=connexion');
   }catch(Exception $e){
     echo "Erreur d'ajout !";
