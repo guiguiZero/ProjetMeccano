@@ -9,7 +9,7 @@
   <!-- Container wrapper -->
   <div class="container-fluid">
     <!-- Navbar brand -->
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="Accueil.php">
       <img src="images/logo.png" height="75" alt="" loading="lazy" />
     </a>
     <!-- Toggle button -->
@@ -23,13 +23,10 @@
       <!-- Left links -->
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">Promotions</a>
+          <a class="nav-link" href="ListProduit.php">Liste Produits</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Liste Produits</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Tutoriels</a>
+          <a class="nav-link" href="Montage.php">Montages</a>
         </li>
       </ul>
       <!-- Left links -->
@@ -38,7 +35,7 @@
       <ul class="navbar-nav mb-2 mb-lg-0">
         <!-- Navbar dropdown -->
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" href="Contact.php">Contact</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle hidden-arrow" href="Panier.php" id="navbarDropdown" role="button">
