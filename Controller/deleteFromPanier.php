@@ -3,7 +3,6 @@
   $idPanier = $_POST['idPanier'];
   $idUser = $_POST['idUSER'];
   $idProduit = $_POST['idProduit'];
-  echo $idUser;
 
   $cnx = Connect();
   $sql = $cnx->prepare("DELETE FROM `contenu` WHERE idPanier =".$idPanier." AND idProduit =".$idProduit);
